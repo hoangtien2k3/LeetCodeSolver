@@ -12,7 +12,7 @@
 int * twoSum(int* nums, int numsSize, int target, int* returnSize){
     *returnSize = 2;
     int *returnNums = (int*) malloc(2*sizeof(int));
-    for (int i = 0; i < numsSize - 1; i++){
+    for (int i = 0; i < numsSize - 1; i++){         //! BubbleSore
         for (int j = numsSize - 1; j > i; j--){
             if (nums[j] + nums[j - 1] == target){
                 returnNums[0] = j;
@@ -20,5 +20,5 @@ int * twoSum(int* nums, int numsSize, int target, int* returnSize){
             }
         }
     }
-    return returnNums;        
+    return returnNums;       //! => O(n^2) 
 }
