@@ -8,8 +8,13 @@
 /*
     * Note: The returned array must be malloced, assume caller calls free().
 */
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<math.h>
 
-int * twoSum(int* nums, int numsSize, int target, int* returnSize){
+// Bubble Sort
+int *twoSum(int* nums, int numsSize, int target, int* returnSize){
     *returnSize = 2;
     int *returnNums = (int*) malloc(2*sizeof(int));
     for (int i = 0; i < numsSize - 1; i++){         //! BubbleSore
@@ -22,3 +27,5 @@ int * twoSum(int* nums, int numsSize, int target, int* returnSize){
     }
     return returnNums;       //! => O(n^2) 
 }
+
+
